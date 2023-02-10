@@ -34,7 +34,7 @@ export const { styled, css, getCssText, createTheme, globalCss } =
         borderGray: "$gray200",
         borderPrimary: "$primary200",
 
-        inlineCodeBackground: "#fff",
+        inlineCodeBackground: "#edeafc",
         inlineCodeColor: "#816eec",
         link: "$primary400",
 
