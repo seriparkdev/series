@@ -1,245 +1,109 @@
 ---
-title: Hello World
-date: 2021-07-10
-description: "Hello World"
-tags: [Java, Development]
-thumbnail: /thumbnails/hello-world.jpg
+title: 원시 값과 객체의 차이
+date: 2022-12-20
+description: 변경 가능한가? 변경 불가능한가?
+tags: [JavaScript]
 ---
 
-This is my first post on my new fake blog! How exciting!
+원시 타입과 객체 타입이 무엇이 다른지는 크게 3가지로 분류해볼 수 있다.
 
-I'm sure I'll write a lot more interesting things in the future.
+> **첫째**, 원시 값은 변경 불가능하지만 객체는 변경 가능한 값이다.
+> **둘째**, 원시 값을 변수에 할당하면 변수에 실제 값이 할당 되지만 객체를 변수에 할당하면 참조 값이 저장된다.
+> **셋째**, 원시 값을 갖는 변수를 다른 변수에 할당하면 원본의 원시 값이 복사되어 전달되지만, 객체를 가리키고 있는 변수를 다른 변수에 할당하면 원본의 참조 값이 복사되어 전달된다.
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](https://en.wikipedia.org/wiki/Salted_duck_egg).
+왜 이렇게 객체와 원시 값은 다를까? 그것에 대해 설명하려고 한다.
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+<br>
 
-![Chinese Salty Egg](./salty_egg.jpg)
+### 📚 원시 값
 
-You can also write code blocks here!
+> 원시 값은 변경 불가능하지만 객체는 변경 가능한 값이다.
 
-```js
-const saltyDuckEgg = "chinese preserved food product"
+나는 여기서 var와 let을 사용하면 변경이 가능한 것이 아닌가?라는 생각을 했다. 나는 변수와 값에 대한 개념에 헷갈렸던 것이다. 정확히 변수와 값에 대한 개념을 짚고 넘어가면 왜 변경 불가능한지 알 수 있다. **변수**란, 저장하기 위해 확보한 메모리 공간 또는 이 메모리 공간을 식별하기 위한 이름 자체이다. **값**이란, 변수에 저장된 데이터이며 표현식의 결과이다. 내가 값이란 것을 듣고 떠올린 개념은 변수였던 것이다.
+
+<br>
+
+**값의 할당**
+
+더 나아가, 원시 값이란 것은 불가능하기 때문에 변수에 새로운 원시 값을 재할당하면 계속해서 원시 값에 새로운 메모리 공간에 저장한다.
+
+```
+var age = 13;
+age = 40;
+age = 50;
 ```
 
-| Number | Title                                    | Year |
-| :----- | :--------------------------------------- | ---: |
-| 1      | Harry Potter and the Philosopher’s Stone | 2001 |
-| 2      | Harry Potter and the Chamber of Secrets  | 2002 |
-| 3      | Harry Potter and the Prisoner of Azkaban | 2004 |
+위와 같이 값을 재할당하면 아래와 같이 메모리가 변경된다. 변수는 할당 받은 값을 가리키기 때문에 처음엔 13을 할당 받아 13이 저장되어있는 A라는 주소를 가리킨다. 그 다음 age가 40으로 변경되었으나 원시 값은 재할당 되지 않기 때문에 13이 저장되어있는 메모리 공간의 값이 40으로 바뀌지 않는다. 그래서 40은 새 메모리 주소에 값이 저장되고 변수는 B 주소를 가리키게 되는 것이다. 이러한 원시 값의 불변성은 데이터의 **신뢰성**을 보장해준다.
+<img src="https://velog.velcdn.com/images/seripark/post/2f8a7fd7-91f0-41f7-ad46-37aeae5433ae/image.jpg" width="50%" height="50%">
 
-[View raw (TEST.md)](https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md)
+다음 결과 값을 예측해보자. copy는 어떤 값을 가질까?
 
-This is a paragraph.
+```
+var paper = 3;
+var copy = paper;
 
-    This is a paragraph.
+paper = 100;
 
-# Header 1
-
-## Header 2
-
-    Header 1
-    ========
-
-    Header 2
-    --------
-
-# Header 1
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
-
-    # Header 1
-    ## Header 2
-    ### Header 3
-    #### Header 4
-    ##### Header 5
-    ###### Header 6
-
-# Header 1
-
-## Header 2
-
-### Header 3
-
-#### Header 4
-
-##### Header 5
-
-###### Header 6
-
-    # Header 1 #
-    ## Header 2 ##
-    ### Header 3 ###
-    #### Header 4 ####
-    ##### Header 5 #####
-    ###### Header 6 ######
-
-> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-    > Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-> ## This is a header.
->
-> 1. This is the first list item.
-> 2. This is the second list item.
->
-> Here's some example code:
->
->     Markdown.generate();
-
-    > ## This is a header.
-    > 1. This is the first list item.
-    > 2. This is the second list item.
-    >
-    > Here's some example code:
-    >
-    >     Markdown.generate();
-
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue
-
-- Red
-- Green
-- Blue
-
-```markdown
-- Red
-- Green
-- Blue
-
-* Red
-* Green
-* Blue
-
-- Red
-- Green
-- Blue
+console.log(copy);
 ```
 
-- `code goes` here in this line
-- **bold** goes here
+결과적으로 copy의 값은 paper과 같이 바뀌지 않는다. 왜냐하면, **값에 의한 전달**을 하기 때문이다. 값에 의한 전달이란 변수(copy)에 원시 값을 갖는 변수(paper)를 할당하면 변수(copy)에는 원시 값을 갖는 변수(paper)의 원시 값이 복사되어 전달된다는 것이다. (엄밀히 말하면 값이 아닌 주소를 전달한다.)
+그림과 같이 copy와 paper는 같은 주소를 가리키지 않는다. 새로운 주소에 값이 복사되고 그 주소를 copy가 가리키게 된다. 이렇게 copy와 paper는 별개로 존재한다.
+<img src="https://velog.velcdn.com/images/seripark/post/86cfa638-2943-4eb7-8afa-ed824e26203c/image.jpg" width="50%" height="50%">
 
-```markdown
-- `code goes` here in this line
-- **bold** goes here
+그리고 원시 값인 문자열은 유사 배열 객체이다. 유사 배열 객체는 배열처럼 인덱스로 프로퍼티 값에 접근할 수 있으며, length 프로퍼티를 갖는 객체를 말한다.
+
+```
+var name = 'alice';
+console.log(name[1]); // l
 ```
 
-1. Buy flour and salt
-1. Mix together with water
-1. Bake
-    2. Don't Bake
+<br>
 
+### 📚 객체
 
-```markdown
-1. Buy flour and salt
-1. Mix together with water
-1. Bake
+변수는 **참조 값**을 통해 객체에 접근한다. 여기서 참조 값은 객체가 저장된 메모리 공간의 주소이다.
+
+```
+var fruit = {
+	apple: 1500
+}
 ```
 
-1. `code goes` here in this line
-1. **bold** goes here
+위와 같은 객체가 있으면 아래와 같은 메모리 구조가 그려진다. 원시 값과는 달리 참조 값을 이용해 객체에 접근하는 방식이다. 그리고 객체는 변경 가능한 값이기 때문에 재할당이 일어나면 원래 변수가 참조하고 있는 메모리 주소의 객체가 직접 변경이 된다. 이러한 특성으로 프로퍼티를 동적으로 추가할 수 있고 프로퍼티 값을 갱신할 수도 있고, 프로퍼티 자체를 삭제할 수도 있다.
+<img src="https://velog.velcdn.com/images/seripark/post/0d15e78b-6073-451f-992d-d2c279487bd4/image.jpg" width="50%" height="50%">
+그러나 이런 객체의 특성은 **여러 개의 식별자가 하나의 객체를 공유할 수 있다는 단점**이 있다.
 
-```markdown
-1. `code goes` here in this line
-1. **bold** goes here
+```
+var fruit = {
+	apple: 1500
+}
+
+var copy = fruit
 ```
 
-Paragraph:
+위와 같은 코드는 다음과 같다. copy와 fruit는 하나의 객체를 공유하기 때문에 둘 중 어느 한쪽에서 객체를 변경하면 서로 영향을 주고 받는다.
+<img src="https://velog.velcdn.com/images/seripark/post/2960d94d-1eab-449b-b2f6-2ebb8583d02e/image.jpg" width="50%" height="50%">
 
-    Code
+참고로 값에 의한 전달과, 참조에 의한 전달은 자바스크립트 딥다이브에서 설명하기 위해 다른 프로그래밍 언어의 개념에서 가져온 용어다. 자바스크립트에는 포인터가 존재하지 않기 때문에 참조에 의한 전달이라는 말과 정확히 상응하지 않을 수 있다.
 
-<!-- -->
++) const는 재할당이 불가능하지만, 배열과 객체 같은 레퍼런스 객체들은 재할당이 가능하다.
+단, 아래와 같은 상황 제외
 
-    Paragraph:
+```
+const fruit = {
+	name: 'apple'
+	price: 1300;
+}
 
-        Code
+// ✖️
+fruit = {
+	name: 'banana'
+	price: 1800;
+}
+```
 
----
+<br>
 
----
-
----
-
----
-
----
-
-    * * *
-
-    ***
-
-    *****
-
-    - - -
-
-    ---------------------------------------
-
-This is [an example](http://example.com "Example") link.
-
-[This link](http://example.com) has no title attr.
-
-This is [an example][id] reference-style link.
-
-[id]: http://example.com "Optional Title"
-
-    This is [an example](http://example.com "Example") link.
-
-    [This link](http://example.com) has no title attr.
-
-    This is [an example] [id] reference-style link.
-
-    [id]: http://example.com "Optional Title"
-
-_single asterisks_
-
-_single underscores_
-
-**double asterisks**
-
-**double underscores**
-
-    *single asterisks*
-
-    _single underscores_
-
-    **double asterisks**
-
-    __double underscores__
-
-This paragraph has some `code` in it.
-
-    This paragraph has some `code` in it.
-
-LaTeX supported by KaTeX.
-
-
-$a^2 + b^2 = c^2$
-
-$$
-\begin{CD}
-A @>a>> B \\
-@VbVV @AAcA \\
-C @= D
-\end{CD}
-$$
-
+> 참고 서적
+> 자바스크립트 딥다이브
