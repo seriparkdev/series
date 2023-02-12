@@ -13,7 +13,7 @@ tags: [web]
 
 ![](https://velog.velcdn.com/images/seripark/post/8a3088fb-e158-4782-9ab8-bcac9c89c5a8/image.jpg)
 
-이 글에서 다룰 렌더링 절차는 다음과 같습니다. 렌더링은 메인 스레드에서 parsing부터 paint까지의 과정을 거쳐 compositing 후 display 단계로 마무리 되어 완료됩니다.
+이 글에서 다룰 렌더링 절차는 다음과 같습니다. 렌더링은 메인 스레드에서 parsing부터 paint까지의 과정을 거쳐 compositing 후 display되어 마무리됩니다.
 
 # Parsing
 
