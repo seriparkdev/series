@@ -150,6 +150,9 @@ module.exports = {
 
 모드에는 `development`, `production`, `none` 이렇게 세 가지가 있습니다. 모드를 설정해주면 각 **환경에 맞는 웹팩의 기본 제공 최적화**를 활성화 할 수 있습니다. 아무것도 설정하지 않은 기본값은 `production`입니다. 모드 설정 시 `DefinePlugin`의 `process.env.NODE_ENV`가 `development`나, `production`이 되며 모드가 `none`일 때는 기본 최적화 옵션을 해제합니다.
 
+- development : 강력한 소스 매핑, 로컬 호스트 서버에서는 live reloading or hot module replacement
+- production : 로드 시간을 개선하기 위한 번들 크기 축소, 가벼운 소스 맵, 최적화된 asset
+
 <br>
 
 # 적용한 설정들
