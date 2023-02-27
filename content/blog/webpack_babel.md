@@ -278,7 +278,7 @@ module.exports = merge(common, {
 
 webpack.common.js를 webpack-merge를 통해서 dev에 병합할 수 있습니다. `ReactRefreshWebpackPlugin`은 코드에 변경 사항이 있을 때 감지하여 리로드시켜주는 플러그인입니다. 이를 사용하지 않으면 변경 사항이 자동으로 반영되지 않습니다. 이는 개발 환경에서만 필요하기 때문에 `devlopment` 모드에만 사용했습니다. `minimize`는 false로 지정해주었는데 이유는 개발 환경에서는 코드를 최적화하기보다는 디버깅과 코드 수정에 용이하도록 빌드 시간을 단축해주는 것이 좋기 때문입니다.
 
-## webpack.prod.js
+### webpack.prod.js
 
 ```javascript
 const { merge } = require("webpack-merge");
