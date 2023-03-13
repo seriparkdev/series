@@ -1,6 +1,6 @@
 const config = {
   title: "seri-log", // Blog name
-  author: "SERI :)", // Your name
+  author: "seri", // Your name
   description: "절망의 계곡에서 벗어나자",
   siteUrl: "https://seri-log.netlify.app",
   thumbnail: "/thumbnails/main.png", // Default blog thumbnail. i.e. '/thumbnails/main.png'
