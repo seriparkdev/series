@@ -1,6 +1,6 @@
 const config = {
   title: "seri-log", // Blog name
-  author: "seripark", // Your name
+  author: "SERI :)", // Your name
   description: "절망의 계곡에서 벗어나자",
   siteUrl: "https://seri-log.netlify.app",
   thumbnail: "/thumbnails/main.png", // Default blog thumbnail. i.e. '/thumbnails/main.png'
@@ -12,7 +12,7 @@ const config = {
     instagram: "", // Instagram username
   },
   comment: {
-    utterances: "", // Your GitHub repository
+    utterances: "seriparkdev/gatsby-starter-lavender", // Your GitHub repository
     disqusShortName: "", // Disqus short name
   },
   icon: "src/images/gatsby-icon.png", // path of blog icon
