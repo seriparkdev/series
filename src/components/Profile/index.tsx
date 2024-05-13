@@ -1,9 +1,9 @@
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import React, { memo, PropsWithChildren } from "react";
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import React, { memo, PropsWithChildren } from 'react';
 
-import { useAuthorProfile } from "~/hooks/useAuthorProfile";
-import { useCheckAboutPage } from "~/hooks/useCheckAboutPage";
+import { useAuthorProfile } from '~/hooks/useAuthorProfile';
+import { useCheckAboutPage } from '~/hooks/useCheckAboutPage';
 
 import {
   Container,
@@ -12,7 +12,7 @@ import {
   Name,
   Description,
   Wrapper,
-} from "./styles";
+} from './styles';
 
 interface SocialLinkProps {
   username?: string;
@@ -50,38 +50,38 @@ const Profile = () => {
 
   const socialLinks: Record<keyof GatsbyTypes.Social, SocialLink> = {
     github: {
-      text: "GitHub",
-      url: "https://github.com/",
+      text: 'GitHub',
+      url: 'https://github.com/',
     },
     twitter: {
-      text: "Twitter",
-      url: "https://twitter.com/",
+      text: 'Twitter',
+      url: 'https://twitter.com/',
     },
     facebook: {
-      text: "Facebook",
-      url: "https://www.facebook.com/",
+      text: 'Facebook',
+      url: 'https://www.facebook.com/',
     },
     instagram: {
-      text: "Instagram",
-      url: "https://www.instagram.com/",
+      text: 'Instagram',
+      url: 'https://www.instagram.com/',
     },
     linkedin: {
-      text: "LinkedIn",
-      url: "https://www.linkedin.com/in/",
+      text: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/',
     },
   };
 
   return (
     <Container>
       <StaticImage
-        className="profile-image"
-        layout="fixed"
-        formats={["auto", "webp", "avif"]}
-        src="../../images/profile-pic.jpeg"
+        className='profile-image'
+        layout='fixed'
+        formats={['auto', 'webp', 'avif']}
+        src='../../images/profile-pic.jpg'
         width={70}
         height={70}
         quality={95}
-        alt="Profile picture"
+        alt='Profile picture'
       />
       <Wrapper>
         <Name>
