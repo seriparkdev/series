@@ -1,7 +1,7 @@
 ---
 title: CSR과 SSR에 대해 알아보자
 date: 2023-03-24
-description: 왜 SSR이 인기가 많아졌는지 궁금해져서 알아봤다
+description: 웹 렌더링 방식
 tags: [csr, ssr]
 ---
 

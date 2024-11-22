@@ -1,5 +1,5 @@
 const config = {
-  title: 'seri.log', // Blog name
+  title: 'seri-log', // Blog name
   author: '박세리', // Your name
   description: 'Frontend Developer',
   siteUrl: 'https://seri-log.netlify.app',

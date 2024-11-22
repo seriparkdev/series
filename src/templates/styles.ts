@@ -8,12 +8,12 @@ export const Article = styled('article', {
 
     svg: {
       fill: '$text500',
-    }
-  }
+    },
+  },
 });
 
 export const TableOfContents = styled('div', {
-  marginBottom: '1.5rem',
+  marginBottom: '5rem',
 
   '> ul': {
     marginLeft: 0,
@@ -25,15 +25,16 @@ export const TableOfContents = styled('div', {
     li: {
       paddingTop: '0.125rem',
       paddingBottom: '0.125rem',
+      marginBottom: '0.5rem',
 
       color: '$text200',
       fontSize: '0.875rem',
 
       transition: 'color $transitionDuration $transitionTiming',
-
       a: {
         textDecoration: 'underline',
-      }
+        fontSize: '1rem',
+      },
     },
   },
 });
@@ -43,7 +44,8 @@ export const Header = styled('header', {
 });
 
 export const Title = styled('h1', {
-  fontSize: '2.25rem',
+  fontSize: '2rem',
+  lineHeight: '1.4',
 });
 
 export const ArticleMetadata = styled('div', {
@@ -59,27 +61,40 @@ export const ArticleMetadata = styled('div', {
 });
 
 export const Content = styled('section', {
-  wordBreak: 'keep-all',
+  minWidth: '100%',
+  wordBreak: 'break-all',
+  fontWeight: 400,
+  fontSize: '1.1rem',
 
+  p:{
+    strong:{
+      fontWeight: 600
+    },
+    lineHeight: '1.9',
+  },
   h1: {
-    marginTop: '2rem',
+    marginTop: '3rem',
     marginBottom: '1.25rem',
     paddingBottom: '0.25rem',
-    borderBottom: '1px solid $borderGray',
+    borderBottom: '2px solid $gray200',
 
     a: {
       borderBottom: 'none',
-    }
+    },
   },
   h2: {
-    marginTop: '1.5rem',
+    width: 'fit-content',
+    marginTop: '3.5rem',
     marginBottom: '1rem',
     paddingBottom: '0.25rem',
-    borderBottom: '1px solid $borderGray',
+    borderBottom: '2px solid $gray200',
 
     a: {
       borderBottom: 'none',
-    }
+    },
+  },
+  h3: {
+    marginTop: '3rem',
   },
   a: {
     borderBottom: '1px solid $borderPrimary',
@@ -92,11 +107,37 @@ export const Content = styled('section', {
     code: {
       wordBreak: 'break-all',
       overflowWrap: 'break-word',
-    },
+      float: 'left',
+      textSizeAdjust: '100%',
+      minWidth: '100%', },
   },
   'pre, code': {
     fontVariantLigatures: 'none',
-  }
+  },
+  li: {
+    fontSize: '1.1rem',
+    lineHeight: '1.9',
+  },
+  blockquote: {
+    margin: '1.5rem 0',
+    fontStyle: 'italic',
+    color: '$text200',
+  },
+  '.gatsby-highlight': {
+    fontSize: '14px',
+    code: {
+      display: 'block',
+      width: '600px',
+    },
+  },
+  '.gatsby-highlight-code-line': {
+    display: 'table',
+    minWidth: 'calc(100% + 1.75em * 2)',
+    marginLeft: '-1em',
+    paddingLeft: '1.75em',
+    backgroundColor: '#3d485a',
+    borderLeft: '0.25em solid #aad5ff',
+  },
 });
 
 export const Footer = styled('footer', {
@@ -111,5 +152,5 @@ export const Footer = styled('footer', {
     transition: 'background-color $transitionDuration $transitionTiming',
 
     content: '',
-  }
+  },
 });
