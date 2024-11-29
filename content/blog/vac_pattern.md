@@ -1,5 +1,5 @@
 ---
-title: 뷰와 로직을 분리해주는 VAC 패턴
+title: 뷰와 비즈니스 로직을 분리해주는 VAC 패턴
 date: 2024-11-10
 description: 컴포넌트의 관심사를 분리하자
 tags: [React]
