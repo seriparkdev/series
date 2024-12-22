@@ -1,7 +1,7 @@
 ---
 title: 웹 폰트 로드 시간 줄이기
 date: 2024-12-22
-description: 용량으로 인한 지연 로드 최적화
+description: 빠른 웹 폰트 서빙을 통해 사용자 경험 개선시키기
 tags: [optimization]
 ---
 
