@@ -73,7 +73,7 @@ export const Content = styled('section', {
     lineHeight: '1.9',
   },
   h1: {
-    marginTop: '3rem',
+    marginTop: '5rem',
     marginBottom: '1.25rem',
     paddingBottom: '0.25rem',
     borderBottom: '2px solid $gray200',
