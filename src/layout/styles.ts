@@ -56,6 +56,7 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
     img: {
       display: "block",
       margin: "0 auto",
+      padding: "20px 0",
       maxWidth: "100%",
     },
     table: {
@@ -114,11 +115,13 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
 
       'pre[class^="language-"]': {
         borderRadius: "0.25rem",
+        margin: '20px 0'
       },
     },
     ':not(pre) > code[class*="language-"]': {
       color: "$inlineCodeColor",
       background: "$inlineCodeBackground",
+      padding: "2px 6px"
     },
   })();
 export const Root = styled("div", {
