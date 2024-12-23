@@ -121,7 +121,7 @@ pyftsubset /content/PretendardVariable.woff2 --text="가나다라" --output-file
 
 # 최적화 결과
 
-직접 제작한 서브셋 폰트는 446KB로 약 80%만큼 크기가 감소했다. 따라서 해당 서브셋 폰트를 적용해서 확인한 결과 이전에 폰트가 느리게 다운로드 되어 시스템 폰트에서 프리텐다드 폰트가 느리게 적용되는 현상이 해결되었다.
+fontTools로 제작한 서브셋 폰트는 446KB로, 기존 폰트(2.1MB) 대비 용량이 약 80% 감소했다. 이를 통해 폰트 다운로드 시간이 7초에서 2초로 단축되었고, 시스템 폰트 로딩 속도도 개선되어 랜딩 페이지의 FOUT(Flash of Unstyled Text) 현상이 개선되었다.
 
 ![](https://velog.velcdn.com/images/parkseridev/post/165ca8d6-f925-4b15-8a8f-1bbb11f4e0bc/image.png)
 
