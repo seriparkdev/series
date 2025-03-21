@@ -1,8 +1,8 @@
 ---
-title: React Developer Tools로 디버깅하기
+title: React Developer Tools 사용법에 대해 알아보기
 date: 2025-03-16
-description: 사용법에 대해 알아보자
-tags: [react]
+description: 작업 효율성을 향상 시켜줄 도구
+tags: [React]
 ---
 
 # React Developer Tools
@@ -38,7 +38,7 @@ npm install -g react-devtools
 오른쪽 패널 상단에 위치한 아이콘들이 어떤 역할을 하는지 알아보자.
 
 **1. ⚠️**
-
+<br/>
 React의 `ErrorBoundary`는 컴포넌트 트리에서 발생하는 에러를 처리하고, 오류가 발생했을 때 fallback 컴포넌트를 표출하는데 이를 테스트 할 수 있게 컴포넌트를 error 상태로 강제로 전환한다.
 
 따라서 클릭했을 때 Fallback 컴포넌트로 등록해둔 `Error!`라는 텍스트가 표출되는 것을 확인할 수 있다.
@@ -51,17 +51,17 @@ React의 `ErrorBoundary`는 컴포넌트 트리에서 발생하는 에러를 처
 
 
 **2. ⏱**
-
+<br/>
 Lazy 컴포넌트가 로드되는 동안 `Suspense`는 fallback 컴포넌트를 표출해주는데, 이를 테스트할 수 있게 loading 상태로 전환한다. 따라서 클릭했을 때 fallback 컴포넌트로 등록해놓은 `loading...` 텍스트가 표출되는 것을 확인할 수 있다.
 ![](https://velog.velcdn.com/images/parkseridev/post/ef707073-f959-41f6-a34e-eae6ec8292d9/image.png)
 
 **3. 👁**
-
+<br/>
 선택된 컴포넌트의 DOM 노드를 강조 표시하고 뷰포트에서 DOM 노드가 보일 수 있게 스크롤 되며 Elements 탭으로 이동해 해당 컴포넌트의 element를 highlight 해준다.
 ![](https://velog.velcdn.com/images/parkseridev/post/f98ff221-959c-4173-8252-9542c2c9c8ff/image.png)
 
 **4. 🐛**
-
+<br/>
 컴포넌트와 관련된 데이터를 조금 더 상세하게 확인할 수 있게 콘솔에 기록해준다.![](https://velog.velcdn.com/images/parkseridev/post/fb1dfd83-0541-48af-904c-bac8bc33ed7a/image.png)
 
 
