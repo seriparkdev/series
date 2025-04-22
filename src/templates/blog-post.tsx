@@ -15,6 +15,7 @@ import 'katex/dist/katex.min.css';
 import {
   Article, TableOfContents, Content, Footer, Header, ArticleMetadata, Title
 } from './styles';
+import Giscus from '@giscus/react'
 
 
 const BlogPostTemplate = ({ data, location }: PageProps<GatsbyTypes.BlogPostBySlugQuery>) => {
@@ -71,6 +72,21 @@ const BlogPostTemplate = ({ data, location }: PageProps<GatsbyTypes.BlogPostBySl
         />
         <Footer>
           <Profile />
+          <Giscus
+            id='comments'
+            repo='emewjin/comments'
+            repoId='R_kgDOGiptZg'
+            category='Comments'
+            categoryId='DIC_kwDOGiptZs4CcqJV'
+            mapping='pathname'
+            term='Welcome to @giscus/react component!'
+            strict='0'
+            reactionsEnabled='0'
+            emitMetadata='1'
+            inputPosition='top'
+            theme='preferred_color_scheme'
+            lang='ko'
+          />
         </Footer>
       </Article>
       { commentConfig?.utterances && <Utterances repo={commentConfig.utterances} /> }

@@ -32,7 +32,7 @@ styled-components는 오랫동안 React 생태계에서 큰 비중을 차지하�
 
 
 
-# styled-components 작동 방식
+# 🔍 styled-components 작동 방식
 먼저 기술적 배경에 대해 이해하기 위해서는 근본적으로 CSS-in-JS의 작동 방식에 대해 알아야 하기에 이를 먼저 이해해야 한다.
 
 ## 기본 사용법
@@ -144,7 +144,7 @@ const Button = styled.button`
 ```
 
 
-# SSR에서 발생하는 styled-components의 문제점
+# 🔍 SSR에서 발생하는 styled-components의 문제점
 
 styled-components는 원래 CSR(Client Side Rendering)을 염두에 두고 설계되었다. 그러나 웹 성능과 SEO 개선을 위해 CSR(Server Side Rendering)을 도입하는 프로젝트가 늘어나면서, styled-components를 SSR 환경에서 사용할 때 발생하는 문제점들이 대두되었다.
 
@@ -272,7 +272,7 @@ styled-components는 이러한 SSR 환경에서의 문제를 해결하기 위해
 
 `ServerStyleSheet`이와 관련된 내용은 [styled-components 공식 문서](https://styled-components.com/docs/advanced#serverside-rendering)에서 자세하게 확인할 수 있다.
 
-# RSC(React Server Components)
+# 🔍 RSC(React Server Components)
 앞선 챕터들에서 SSR 환경에서도 styled-components가 특별한 설정을 통해 문제없이 동작할 수 있음을 알 수 있었다. 그렇다면 왜 React Server Components(RSC)에서는 호환성 문제가 발생는 걸까? 이를 이해하기 위해 RSC를 살펴보려 한다.
 
 ## RSC의 개념과 특징
@@ -358,7 +358,7 @@ export default function ThemeProvider(props: Props): React.JSX.Element | null {
 ```
 
 
-# 결론
+# 📃 결론
 styled-components가 유지보수 모드로 전환한 이유에 영향을 미쳤던 이유 중 하나인 RSC와의 호환성 문제에 대해 살펴보았다. styled-components는 Context API에 크게 의존하는 런타임 기반 CSS-in-JS 라이브러리로, 서버에서만 실행되고 클라이언트에서 하이드레이션되지 않는 RSC의 특성과 호환되지 않는다.
 
 호환성에 대한 문제점이 계속 제기되면서 [styled-components GitHub issue](https://github.com/styled-components/styled-components/issues/3856)에서도 오랜기간 논의 되었고, 메인테이너는 React 팀에서 서버 컴포넌트에서도 사용할 수 있는 서버용 Context를 발표하기를 기대했던 것 같다.

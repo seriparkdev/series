@@ -124,7 +124,6 @@ export const Content = styled('section', {
     color: '$text200',
   },
   '.gatsby-highlight': {
-    fontSize: '14px',
     code: {
       display: 'block',
       width: '600px',
