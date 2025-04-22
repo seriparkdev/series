@@ -73,6 +73,7 @@ export const Content = styled('section', {
     lineHeight: '1.9',
   },
   h1: {
+    fontSize: '1.7rem',
     marginTop: '5rem',
     marginBottom: '1.25rem',
     paddingBottom: '0.25rem',
@@ -83,6 +84,7 @@ export const Content = styled('section', {
     },
   },
   h2: {
+    fontSize: '1.5rem',
     width: 'fit-content',
     marginTop: '3.5rem',
     marginBottom: '1rem',
@@ -94,6 +96,7 @@ export const Content = styled('section', {
     },
   },
   h3: {
+    fontSize: '1.2rem',
     marginTop: '3rem',
   },
   a: {
@@ -105,6 +108,7 @@ export const Content = styled('section', {
   },
   pre: {
     code: {
+      fontSize: '14px',
       wordBreak: 'break-all',
       overflowWrap: 'break-word',
       float: 'left',
