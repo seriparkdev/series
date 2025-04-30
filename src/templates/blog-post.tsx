@@ -73,11 +73,11 @@ const BlogPostTemplate = ({ data, location }: PageProps<GatsbyTypes.BlogPostBySl
         <Footer>
           <Profile />
           <Giscus
-            id='comments'
-            repo='emewjin/comments'
-            repoId='R_kgDOGiptZg'
+            id='seri.log'
+            repo='seriparkdev/seri.log'
+            repoId='R_kgDOI8NJQw'
             category='Comments'
-            categoryId='DIC_kwDOGiptZs4CcqJV'
+            categoryId='DIC_kwDOI8NJQ84CpV3U'
             mapping='pathname'
             term='Welcome to @giscus/react component!'
             strict='0'
