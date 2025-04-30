@@ -75,8 +75,8 @@ const BlogPostTemplate = ({ data, location }: PageProps<GatsbyTypes.BlogPostBySl
       <Giscus
       repo="seriparkdev/series"
       repoId="R_kgDOI8NJQw"
-      category="Announcements"
-      categoryId="DIC_kwDOI8NJQ84CpV3T"
+      category="General"
+      categoryId="DIC_kwDOI8NJQ84CpV3U"
       mapping="pathname"
       strict="0"
       reactionsEnabled="1"
