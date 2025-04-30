@@ -73,11 +73,12 @@ const BlogPostTemplate = ({ data, location }: PageProps<GatsbyTypes.BlogPostBySl
         <Footer>
           <Profile />
    <Giscus
+      id='comments'
       repo="seriparkdev/series"
       repoId="R_kgDOI8NJQw"
       category="Announcements"
       categoryId="DIC_kwDOI8NJQ84CpV3U"
-      mapping="title"
+      mapping="pathname"
       strict="0"
       reactionsEnabled="1"
       emitMetadata="1"
