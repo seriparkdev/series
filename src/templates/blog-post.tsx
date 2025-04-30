@@ -72,21 +72,20 @@ const BlogPostTemplate = ({ data, location }: PageProps<GatsbyTypes.BlogPostBySl
         />
         <Footer>
           <Profile />
-       <Giscus
-            id='series'
-            repo='seriparkdev/series'
-            repoId='R_kgDOI8NJQw'
-            category='comments'
-            categoryId='DIC_kwDOI8NJQ84CpV3U'
-            mapping='pathname'
-            term='Welcome to @giscus/react component!'
-            strict='0'
-            reactionsEnabled='0'
-            emitMetadata='1'
-            inputPosition='top'
-            theme='preferred_color_scheme'
-            lang='ko'
-          />
+   <Giscus
+      repo="seriparkdev/series"
+      repoId="R_kgDOI8NJQw"
+      category="Announcements"
+      categoryId="DIC_kwDOI8NJQ84CpV3U"
+      mapping="pathname"
+      strict="0"
+      reactionsEnabled="1"
+      emitMetadata="1"
+      inputPosition="top"
+      theme="preferred_color_scheme"
+      lang="ko"
+      loading="lazy"
+    />
         </Footer>
       </Article>
       { commentConfig?.utterances && <Utterances repo={commentConfig.utterances} /> }
