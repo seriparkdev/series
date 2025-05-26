@@ -88,6 +88,9 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
         whiteSpace: "pre-wrap",
       },
     },
+    em:{
+      color: "$text100",
+    },
     blockquote: {
       paddingLeft: "1rem",
       borderLeft: "0.25rem solid $borderPrimary",
