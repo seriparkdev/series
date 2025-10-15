@@ -5,9 +5,6 @@ description: 픽셀로 화면에 보이기까지의 과정
 tags: [web]
 ---
 
-# 서론
-
-이 글은 Blink engine 기준으로 작성되었습니다. 브라우저 렌더링 과정을 깊게 이해해 보는 것이 목표입니다.
 
 # 개요
 
@@ -38,14 +35,9 @@ tags: [web]
 <br>
 
 ## Parsing의 중단 지점
-
 파싱은 `<link>`, `<img>`, `<script>` 태그를 만나면 중단됩니다. 보통 브라우저는 외부 리소스인 이미지, 자바스크립트, CSS를 사용하고 있는데 이는 네트워크나 캐시로부터 가져와야 하기 때문이죠.
 
-아래 이미지는 개발자 도구에서 확인한 네트워크 요청과 응답 리스트입니다. 웹 페이지를 열자마자 리소스들을 가져오고 있는 것을 볼 수 있습니다.
 
-<br>
-
-![](https://velog.velcdn.com/images/seripark/post/d0e5584f-65f7-44ae-8815-4bdcd4ed33e5/image.png)
 
 <br>
 
@@ -76,7 +68,7 @@ HTML 파싱이 끝나면 CSS 파싱을 시작합니다. `<link>`, `<style>`의 C
 
 <br>
 
-![](https://velog.velcdn.com/images/seripark/post/fb101344-c859-45c1-aed3-cece6b312822/image.png)
+![](https://velog.velcdn.com/images/parkseridev/post/3f5020c4-ecc0-49bd-bb98-efb7918e3ca1/image.png)
 
 <br>
 
@@ -123,7 +115,7 @@ HTML 파싱이 끝나면 CSS 파싱을 시작합니다. `<link>`, `<style>`의 C
 
 <br>
 
-![](https://velog.velcdn.com/images/seripark/post/aa24a5e7-8049-442b-a6ac-ffc5304747e6/image.png)
+![](https://velog.velcdn.com/images/parkseridev/post/7d3702ed-510f-4882-ba93-f6dd814990c6/image.png)
 
 <br>
 
